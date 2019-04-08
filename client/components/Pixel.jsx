@@ -18,7 +18,7 @@ class Pixel extends React.Component {
             style: {
                 height: '1em',
                 width: '1em',
-                backgroundColor: 'green'
+                backgroundColor: this.randomHexColor()
             }
         }
     }
@@ -28,12 +28,21 @@ class Pixel extends React.Component {
     }
 
     render () {
-        this.state.style.backgroundColor = this.randomHexColor()
-        return (
-            <div style={this.state.style}></div>
+        return(    
+            <div style={this.state.style} className="pixel"></div>
         )
     }
-
 }
 
-export default Pixel
+class Pixels extends React.Component {
+    render(){
+
+        let pixelsArray = []
+        for (let i = 0; i < 1000; i++) {
+            pixelsArray.push(<Pixel />)
+            }
+        return (pixelsArray)
+    }
+}
+
+export default Pixels
