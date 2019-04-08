@@ -4,7 +4,31 @@ import Pixel from './Pixel'
 const App = () => {
   // return (
   //   <div>React development has begun!</div>
-    return <Pixel />
+    return <div>
+      <Pixel />
+    <Pixel />
+    <Pixel />
+    <Pixel />
+    <Pixel />
+    <Pixel />
+    <Pixel />
+    <Pixel />
+    <Pixel />
+    <Pixel />
+    <Pixel />
+    <Pixel />
+    <Pixel />
+    <Pixel />
+    <Pixel />
+    <Pixel />
+    <Pixel />
+    <Pixel />
+    <Pixel />
+    <Pixel />
+    <Pixel />
+    <Pixel />
+    <Pixel />
+    </div> 
   }
   
 
