@@ -25,9 +25,36 @@ class Pixel extends React.Component {
     })
   }
 
+  mouseHandler = evt => {
+    this.setState({
+      style: {
+        ...this.state.style,
+        backgroundColor: 'green',
+      }
+    })
+  }
+
+  contextHandler = evt => {
+    this.setState({
+      style: {
+        ...this.state.style,
+        backgroundColor: 'black',
+      }
+    })
+    evt.preventDefault()
+  }
+
   render() {
     return (
-      <div style={this.state.style} onClick={this.clickHandler.bind(this)}>
+      <div style={this.state.style} 
+      onClick={this.clickHandler.bind(this)}
+      
+      onMouseEnter = {this.mouseHandler.bind(this)}
+
+      onContextMenu = {this.contextHandler.bind(this)}
+
+
+      >
 
       </div>
     )
