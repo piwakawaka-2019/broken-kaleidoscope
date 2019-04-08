@@ -11,9 +11,9 @@ import React from 'react'
 // }
 
 class Pixel extends React.Component {
+
     constructor(props){
         super(props)
-        console.log("Props: ", this.props)
         this.state = {
             style: {
                 height: '1em',
@@ -23,7 +23,12 @@ class Pixel extends React.Component {
         }
     }
 
+    randomHexColor() {
+        return `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
+    }
+
     render () {
+        this.state.style.backgroundColor = this.randomHexColor()
         return (
             <div style={this.state.style}></div>
         )
