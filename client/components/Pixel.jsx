@@ -1,10 +1,11 @@
 import React from 'react'
 
 const randomColour = () => `#${Math.floor(Math.random() * 16777215).toString(16)}`
-const width = 5
+const width = 20
 const height = width
+const randomTime = () => `#${Math.floor(Math.random() * 1000)}`
 
-// const incrementColour = ()=> {             //our attempt at making a colour incrementor
+// const incrementColour = ()=> {             //our attempt at making a colour incrementore
 //   let i = 1
 //   return(Number(i).toString(16))
 // }
@@ -24,14 +25,25 @@ class Pixel extends React.Component {
       width,
       height,
       backgroundColor: randomColour()
-    }   
+    } 
+ 
     this.setState({
       style
     })
   }
+  
+  colourTimer = () =>{
+    const style = {
+    width,
+    height,
+    backgroundColor: '#000000',
+  }  
+  this.setState({
+    style
+  })
+}
 
   render() {
-    console.log(incrementColour)
     return (
   
       <div 
