@@ -11,4 +11,18 @@ html, body, .viewport {
 div {
   display: flex;
   flex-wrap: wrap;
+  
+
+}
+
+.doto{
+  padding:10px;
+
+}
+
+.pixel > div {
+  background-color: lightblue;
+  width: 100px;
+  height: 65px;
+  line-height: 75px;
 }
