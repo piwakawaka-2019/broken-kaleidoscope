@@ -8,8 +8,8 @@ class Pixel extends React.Component {
     super(props)
     this.state = {
       style: {
-        width: '100px',
-        height: '100px',
+        width: '10px',
+        height: '10px',
         backgroundColor: color()
       }
     }
@@ -17,8 +17,8 @@ class Pixel extends React.Component {
 
   changeColor = () => {
     const style = {
-      width: '100px',
-      height: '100px',
+      width: '10px',
+      height: '10px',
       backgroundColor: color()
     }
 
@@ -31,8 +31,8 @@ class Pixel extends React.Component {
     // const style = this.state
     return (
       <div 
-        onMouseEnter={(e) => this.changeColor()}  
-        style={this.state.style}>
+        style={this.state.style}
+        onMouseEnter={(e) => this.changeColor()}>
       </div>
     )
   }
