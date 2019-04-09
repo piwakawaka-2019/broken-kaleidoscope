@@ -34,14 +34,17 @@ class Pixel extends React.Component {
 
   render() {
     return (
-      <div style={this.state.style} onClick={this.clickHandler}></div>
+      <div style={this.state.style} onMouseEnter={this.clickHandler}></div>
     )
   }
 }
 
 function fillScreen() {
   let pixels = [];
-  for (let i = 0; i < 5000; i++) {
+  const x = 1900;
+  const y = 960;
+  const area = x * y;
+  for (let i = 0; i < (area / (20 * 20)); i++) {
     pixels[i] = <Pixel key={i} />
   }
   return (
