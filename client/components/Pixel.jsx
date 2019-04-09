@@ -1,7 +1,7 @@
 import React from 'react'
 
 const randomColour = () => `#${Math.floor(Math.random() * 16777215).toString(16)}`
-const width = 20
+const width = .5
 const height = width
 const randomTime = () => `#${Math.floor(Math.random() * 1000)}`
 
@@ -13,7 +13,7 @@ class Pixel extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      style:{
+      style: {
         height,
         width,
         backgroundColor: randomColour()
@@ -25,31 +25,31 @@ class Pixel extends React.Component {
       width,
       height,
       backgroundColor: randomColour()
-    } 
- 
+    }
+
     this.setState({
       style
     })
   }
-  
-  colourTimer = () =>{
+
+  colourTimer = () => {
     const style = {
-    width,
-    height,
-    backgroundColor: '#000000',
-  }  
-  this.setState({
-    style
-  })
-}
+      width,
+      height,
+      backgroundColor: '#000000',
+    }
+    this.setState({
+      style
+    })
+  }
 
   render() {
     return (
-  
-      <div 
-      onClick={() => this.changeColour()}
-      onMouseEnter={() => this.changeColour()}
-      style = {this.state.style} />
+
+      <div
+        onClick={() => this.changeColour()}
+        onMouseEnter={() => this.changeColour()}
+        style={this.state.style} />
     )
   }
 }
