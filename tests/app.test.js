@@ -4,7 +4,15 @@ import {shallow} from 'enzyme'
 import App from '../client/components/App'
 
 test('<App />', () => {
-  const expected = 'React development has begun!'
   const wrapper = shallow(<App />)
-  expect(wrapper.text()).toBe(expected)
+
+  const expected = "<Pixel /"
+  var onePixel = wrapper.text()
+  var split = onePixel.split(">")
+  const actual = split.find(function(element) {
+    return element == '<Pixel /'
+  })
+
+  
+  expect(actual).toEqual(expected)
 })

@@ -9,6 +9,15 @@ class Pixel extends React.Component {
   constructor(props) {
     super(props)
     const color = `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
+    // const clickHandler = evt => {
+    //   this.setState({
+    //     style:{
+    //       height: '200px',
+    //       weight: '200px',
+    //       backgroundColor: color
+    //     }
+    //   })
+    // }
     this.state = {
       style: {
         height:'200px',
@@ -20,11 +29,15 @@ class Pixel extends React.Component {
   render(){
     return (
       <div
-        style = {this.state.style} 
-        onMouseEnter={() => this.setState({backgroundColor:black})}>
+        style = {this.state.style}>
+        {/* // onClick= {() => clickHandler()}>
+        // {console.log(this.state.style.backgroundColor)} */}
       </div>
       )
     }
+    
   }
+
+
 
 export default Pixel
