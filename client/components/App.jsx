@@ -4,31 +4,12 @@ import Pixel from './Pixel'
 const App = () => {
   // return (
   //   <div>React development has begun!</div>
-    return <div>
-      <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    </div> 
+  //   return [ 
+  //   <Pixel />
+  //   <Pixel />
+  //   <Pixel />
+  // ]
+  return Array.from({ length:1000}, () => <Pixel />)
   }
   
 

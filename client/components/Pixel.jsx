@@ -1,4 +1,5 @@
 import React from 'react'
+import { tsImportEqualsDeclaration } from '@babel/types';
 
 // const Pixel = () => {
 //   return (
@@ -7,12 +8,6 @@ import React from 'react'
 // }
 const randomHexColor = () =>
   `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
-
-
-
-
-
-
 
 class Pixel extends React.Component {
   constructor(props) {
@@ -34,11 +29,19 @@ class Pixel extends React.Component {
 
     )
   }
+
+  mouseOver = evt => {
+    this.setState({ style: {
+      height: '50px',
+      width: '50px',
+      backgroundColor: randomHexColor()
+    } }
+
+    )
+  }
   render() {
     console.log(this.state)
-    return <div style={this.state.style} onClick={this.clickHandler.bind(this)}></div>
+    return <div style={this.state.style} onClick={this.clickHandler.bind(this)} onMouseEnter={this.clickHandler.bind(this)}></div>
   }
-
 }
-
 export default Pixel
