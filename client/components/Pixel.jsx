@@ -8,10 +8,9 @@ class Pixel extends React.Component {
     super(props)
     this.state = {
       style: {
-        height: "5em",
-        width: "5em",
+        height: "30px",
+        width: "30px",
         backgroundColor: randomHexColor(),
-        margin: '5px'
       }
     }
   }
@@ -44,15 +43,37 @@ class Pixel extends React.Component {
     evt.preventDefault()
   }
 
+  onDoubleClickHandler = evt => {
+    this.setState({
+      style: {
+        ...this.state.style,
+        backgroundColor: 'white',
+      }
+    })
+  }
+
+  onDragEnterHandler = evt => {
+    this.setState({
+      style: {
+        ...this.state.style,
+        backgroundColor: 'yellow',
+      }
+    })
+  }
+
+
   render() {
     return (
-      <div style={this.state.style} 
-      onClick={this.clickHandler.bind(this)}
-      
-      onMouseEnter = {this.mouseHandler.bind(this)}
+      <div style={this.state.style}
+        onClick={this.clickHandler.bind(this)}
 
-      onContextMenu = {this.contextHandler.bind(this)}
+        onMouseEnter={this.mouseHandler.bind(this)}
 
+        onContextMenu={this.contextHandler.bind(this)}
+
+        onDoubleClick={this.onDoubleClickHandler.bind(this)}
+
+        onDragEnter={this.onDragEnterHandler.bind(this)}
 
       >
 
