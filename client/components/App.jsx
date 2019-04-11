@@ -4,9 +4,12 @@ import Soundlets from './Soundlets.jsx'
 
 const App = () => {
   return (
-    <div> 
-      {/* <Pixels /> */}
-      <Soundlets />
+    <div>
+      <h1>lsdivhjsfomcgssss</h1>
+      <div> 
+        {/* <Pixels /> */}
+        <Soundlets />
+      </div>
     </div>
   )
 }

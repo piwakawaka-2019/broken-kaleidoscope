@@ -1,8 +1,8 @@
 import React from 'react'
 
 class Soundlets extends React.Component {
-    render(){
 
+    render(){
         let soundlets = []
 
         for (let i = 0; i < 26; i++) {
@@ -24,21 +24,21 @@ class Soundlet extends React.Component {
             }
         }
     }
+    
+    componentDidMount() {
+        // document.addEventListener('onkeydown', this.keyDownHandler)
+        document.getElementById("body").addEventListener("keydown", this.keyDownHandler);
+        document.getElementById("body").addEventListener("click", this.clickHandler);
+        window.focus()
+    }
 
     keyDownHandler = evt => {
-
-        if(event.key == 'd' || 'Vinnie'){
-            console.log('Fuck')
-        }
+        console.log("a key has been pressed")
         
-        if(event.key == 'e'){
-            console.log('you')
+        if(event.key == 'd'){
+            console.log('it was "d"')
         }
-
-        if(event.key == 's'){
-            console.log('Vinnie')
-        }
-
+       
         this.setState({
             style: {
                 height: '50px',
@@ -46,7 +46,11 @@ class Soundlet extends React.Component {
                 backgroundColor: 'green'
             }
         })
-      }
+    }
+
+    clickHandler = evt => {
+        console.log("Body has been clicked")
+    }
 
     render () {
         return(    
