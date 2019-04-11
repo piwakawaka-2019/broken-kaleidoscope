@@ -9,6 +9,7 @@
   "scripts": {
     "start": "webpack && node server",
     "dev": "node server & webpack --watch",
+    "build": "webpack --watch",
     "test": "jest --watchAll"
   },
   "babel": {
