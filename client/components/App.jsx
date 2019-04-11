@@ -1,14 +1,15 @@
 import React from 'react'
 import Pixels from './Pixel.jsx'
 import Soundlets from './Soundlets.jsx'
+import SingleSound from './singleSound.jsx'
 
 const App = () => {
   return (
     <div>
-      <h1>lsdivhjsfomcgssss</h1>
       <div> 
         {/* <Pixels /> */}
-        <Soundlets />
+        {/* <Soundlets /> */}
+        <SingleSound />
       </div>
     </div>
   )

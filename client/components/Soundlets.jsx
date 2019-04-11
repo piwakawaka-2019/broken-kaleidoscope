@@ -1,12 +1,18 @@
 import React from 'react'
 
+let idArray = [
+    "A",
+    "B",
+    "C"
+]
+
 class Soundlets extends React.Component {
 
     render(){
         let soundlets = []
 
-        for (let i = 0; i < 26; i++) {
-            soundlets.push(<Soundlet />)
+        for (let i = 0; i < 3; i++) {
+            soundlets.push(<Soundlet id={idArray[i]} />)
             }
         return (soundlets)
     }
@@ -33,28 +39,27 @@ class Soundlet extends React.Component {
     }
 
     keyDownHandler = evt => {
-        console.log("a key has been pressed")
+        console.log(event.key)
         
-        if(event.key == 'd'){
-            console.log('it was "d"')
+        if(event.key == 'a'){
+            render (
+                <p>hello</p>
+            )           
+        } else {
+            this.setState({
+                style: {
+                    height: '50px',
+                    width: '50px',
+                    backgroundColor: 'green'
+                }
+            })
         }
-       
-        this.setState({
-            style: {
-                height: '50px',
-                width: '50px',
-                backgroundColor: 'green'
-            }
-        })
     }
 
-    clickHandler = evt => {
-        console.log("Body has been clicked")
-    }
 
     render () {
         return(    
-            <input onKeyDown={this.keyDownHandler} style={this.state.style} className="soundlet"></input>
+            <input onKeyDown={this.keyDownHandler} style={this.state.style} className="soundlet" id={this.props.id}></input>
         )
     }
 }
