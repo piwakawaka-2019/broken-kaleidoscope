@@ -1,20 +1,11 @@
 import React from 'react'
 
-import Pixel from './Pixel'
+import Pixels from './Pixels'
 
 const App = () => {
   return (
     <div>
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
+        <Pixels />
     </div>
   )
 }

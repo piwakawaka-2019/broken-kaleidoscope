@@ -1,12 +1,15 @@
 import React from 'react'
 
+let pixelSize = '20px'
+
 export default class Pixel extends React.Component {
+
     constructor(props) {
         super(props);
         this.state = {
             style: {
-            height: '200px',
-            width: '200px',
+            height: pixelSize,
+            width: pixelSize,
             backgroundColor: this.randomHexColor()
             }
         }
@@ -15,8 +18,8 @@ export default class Pixel extends React.Component {
     clickHandler = evt => {
         this.setState({
             style: {
-                height: '200px',
-                width: '200px',
+                height: pixelSize,
+                width: pixelSize,
                 backgroundColor: this.randomHexColor()
             }
         })
@@ -25,8 +28,8 @@ export default class Pixel extends React.Component {
     mouseEnterHandler = evt => {
         this.setState({
             style: {
-                height: '200px',
-                width: '200px',
+                height: pixelSize,
+                width: pixelSize,
                 backgroundColor: this.randomHexColor()
             }
         })
@@ -35,8 +38,8 @@ export default class Pixel extends React.Component {
     rightClickHandler = evt => {
         this.setState({
             style: {
-                height: '100px',
-                width: '100px',
+                height: '50px',
+                width: '50px',
                 backgroundColor: 'black'
             }
         })
@@ -46,8 +49,8 @@ export default class Pixel extends React.Component {
     doubleClickHandler = evt => {
         this.setState({
             style: {
-                height: '200px',
-                width: '200px',
+                height: pixelSize,
+                width: pixelSize,
                 backgroundColor: 'white'
             }
         })
@@ -56,8 +59,8 @@ export default class Pixel extends React.Component {
     // dragEnterHandler = evt => {
     //     this.setState({
     //         style: {
-    //             height: '200px',
-    //             width: '200px',
+    //             height: pixelSize,
+    //             width: pixelSize,
     //             backgroundColor: 'yellow'
     //         }
     //     })
