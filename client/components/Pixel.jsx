@@ -13,7 +13,18 @@ export default class Pixel extends React.Component {
             backgroundColor: this.randomHexColor()
             }
         }
+        // setInterval(this.changeColor(), 2000)
     }
+
+    // changeColor = () => {
+    //     this.setState({
+    //         style: {
+    //             height: pixelSize,
+    //             width: pixelSize,
+    //             backgroundColor: this.randomHexColor()
+    //         }
+    //     })
+    // }
 
     clickHandler = evt => {
         this.setState({
@@ -54,6 +65,17 @@ export default class Pixel extends React.Component {
                 backgroundColor: 'white'
             }
         })
+    }
+
+    intervalHandler = evt => {
+        this.setState({
+            style: {
+                height: pixelSize,
+                width: pixelSize,
+                backgroundColor: this.randomHexColor()
+            }
+        })
+
     }
 
     // dragEnterHandler = evt => {

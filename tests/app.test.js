@@ -3,8 +3,22 @@ import {shallow} from 'enzyme'
 
 import App from '../client/components/App'
 
-test('<App />', () => {
-  const expected = 'React development has begun!'
+
+test('Pixels exists', () => {
+  const expected = '<Pixels />';
   const wrapper = shallow(<App />)
-  expect(wrapper.text()).toBe(expected)
+
+  const actual = wrapper.text()
+
+  expect(actual).toBe(expected)
+})
+
+test('Only one Pixels is Loaded', () => {
+  const expected = 1
+  const wrapper = shallow(<App />)
+
+  const actual = wrapper.length
+
+  expect(actual).toBe(expected)
+
 })
